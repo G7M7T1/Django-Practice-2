@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>List Teacher</h1>
+<ul>
+    {% for teacher in teachers %}
+        <a href='{{ teacher.id }}'>
+            <li>{{ teacher.first_name }} {{ teacher.last_name }}</li>
+        </a>
+    {% endfor %}
+</ul>
+</body>
+</html>
