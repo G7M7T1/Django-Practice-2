@@ -17,6 +17,8 @@ http://127.0.0.1:8000/classroom/teachers/1  #uid
 
 http://127.0.0.1:8000/classroom/teachers/1/update #uid
 
+http://127.0.0.1:8000/classroom/teachers/4/delete #uid
+
 User Name: admin
 
 Password: 123456
