@@ -13,7 +13,7 @@ class Teacher(models.Model):
 
 class Reviews(models.Model):
     name = models.CharField(max_length=30)
-    text = models.CharField(max_length=200)
+    message = models.CharField(max_length=200)
 
     def __str__(self):
         return f"{self.name}'s review"
