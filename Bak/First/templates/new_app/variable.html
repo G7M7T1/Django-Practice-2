@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable</title>
+</head>
+<body>
+<h1>Variable</h1>
+<h2>First Name: {{ first_name | capfirst }}, Last Name: {{ last_name | capfirst }}</h2>
+<h3>
+    {% for item in some_list %}
+    {{ item }}
+    {% endfor %}
+</h3>
+<p>
+    {% if user_login %}
+    Welcome back you are in
+    {% endif %}
+</p>
+</body>
+</html>

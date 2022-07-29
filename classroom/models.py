@@ -9,3 +9,11 @@ class Teacher(models.Model):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} | {self.subject}'
+
+
+class Reviews(models.Model):
+    name = models.CharField(max_length=30)
+    text = models.CharField(max_length=200)
+
+    def __str__(self):
+        return f"{self.name}'s review"

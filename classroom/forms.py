@@ -1,4 +1,5 @@
 from django import forms
+from .models import Reviews
 
 
 class ContactForm(forms.Form):

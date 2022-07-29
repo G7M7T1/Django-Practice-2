@@ -1,7 +1,8 @@
-from django.views.generic import TemplateView, FormView, CreateView, ListView, DetailView
-from classroom.forms import ContactForm
+from django.views.generic import TemplateView, \
+    FormView, CreateView, ListView, DetailView, UpdateView
 from django.urls import reverse_lazy
-from classroom.models import Teacher
+from classroom.models import Teacher, Reviews
+from .forms import ContactForm
 
 
 # Create your views here.
@@ -28,7 +29,6 @@ class ContactFormView(FormView):
     success_url = reverse_lazy('classroom:thanks')
 
     def form_valid(self, form):
-        print(form.cleaned_data)
         return super().form_valid(form)
 
 
@@ -39,3 +39,9 @@ class TeacherListView(ListView):
 
 class TeacherDetailView(DetailView):
     model = Teacher
+
+
+class TeacherUpdateView(UpdateView):
+    model = Teacher
+    fields = "__all__"
+    success_url = reverse_lazy('classroom:teacher-list')

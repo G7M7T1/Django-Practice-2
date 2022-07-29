@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Patients</title>
+</head>
+<body>
+    {{ patients }}
+    {% for person in patients %}
+        <p>{{ person }}</p>
+    {% endfor %}
+
+    {% for person in patients %}
+        <p>{{ person.last_name }} {{ person.first_name }} Age: {{ person.age }}</p>
+    {% endfor %}
+</body>
+</html>
